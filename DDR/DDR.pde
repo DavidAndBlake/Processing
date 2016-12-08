@@ -14,6 +14,7 @@ arrowObject rightA;
 arrowObject flashA;
 void setup(){ 
 size(1000,800);
+ int s = 0;
 up = loadImage("up.png");
 down = loadImage("down.png");
 left = loadImage("left.png");
@@ -107,10 +108,18 @@ rightA.move();
 downA.move();
 }
 }
+
 void score(){
-  
+ 
  if (abs (upA.gety()-flashA.gety()) <= 50){
 print("good") ;
+textSize(64);
+text("good", 10, 30); 
+fill(0, 102, 153);
+textSize(64);
+text(s, 10, 30); 
+fill(0, 102, 153);
+
  }
 if (abs (downA.gety()-flashA.gety()) <= 50){
 print("good") ;
@@ -122,4 +131,3 @@ print("good") ;
 print("good") ;
  }
 }
-
